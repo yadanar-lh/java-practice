@@ -7,7 +7,8 @@ void main() {
 //    boolean result = IsPrime(33);
 //     FizzBuzz(30);
 //    boolean result = IsPowerOfTwo(4096);
-    int result = ReverseInteger(-897);
+//    int result = ReverseInteger(-897);
+    int result = DigitFrequency("2223334566");
     System.out.println(result);
 
 
@@ -126,25 +127,40 @@ public int ReverseInteger(int n){
 /*
 Pseudocode
 =========
-declare count 0
-compare num = 0
-enhance for looping with char array
-if index 0 == index 1, add to count, add index 0 to compare num
-if index 0 > index 1, add index 1 to compare num
-then continue comparing compare num with next indexes
+input = 223334444
+output = 4
+Process
+1. make a blank array for count
+2. add counts using enhance for loop
+3. use loop to find which number has max frequent
+4. use condition to make sure smallest number is output when tied
+
+--------
+
+Decomposition for frequent counting from array
+
+example [0,1,1,2,3,8,6,1,8,1]
+from back to front looping,
+max number added to variable
+if equal in comparing, choose front index
  */
 
-public int MostFrequentDigit(int n){
-    int count = -1;
-    int comparable;
-    String num = String.valueOf(n);
-    for(Character letter : num.toCharArray()){
-        comparable = Character.getNumericValue(num.indexOf(0));
-          if(comparable == Character.getNumericValue(letter)){
-              count ++;
-          } else if(Character.getNumericValue(num.indexOf(0)) > Character.getNumericValue(num.indexOf(1))) {
-              comparable = Character.getNumericValue(letter);
+public int DigitFrequency(String input){
+    int frequentCount = 0;
+    char[] digits = input.toCharArray();
+    int[] countArray = new int[10];
+    for(char c : digits){
+        countArray[c - '0']++;
+    }
+    int maxCount = 0;
+    for(int i = countArray.length -1; i >= 0; i--){
+        if(countArray[i] >= maxCount){
+            maxCount = countArray[i];
+//            System.out.println("max count" + maxCount);
+            frequentCount = i;
+            // System.out.println(frequentCount);
         }
     }
-    return count;
+    return frequentCount;
 }
+
