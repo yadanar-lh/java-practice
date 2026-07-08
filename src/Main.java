@@ -3,6 +3,7 @@
 import com.ylh.loops.*;  // Imports ALL classes in the loops package
 
 import static com.ylh.loops.ForLoopExercises.DigitFrequency;
+import static com.ylh.loops.NestedLoopExercises.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,9 @@ public class Main {
 //     FizzBuzz(30);
 //    boolean result = IsPowerOfTwo(4096);
 //    int result = ReverseInteger(-897);
-        int result = DigitFrequency("2223334566");
+//        int result = DigitFrequency("2223334566");
+        int result = countVowelsInAllSubstrings("yadanar");
         System.out.println(result);
+
     }
 }
