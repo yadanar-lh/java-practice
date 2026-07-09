@@ -15,7 +15,8 @@ public class Main {
 //    boolean result = IsPowerOfTwo(4096);
 //    int result = ReverseInteger(-897);
 //        int result = DigitFrequency("2223334566");
-        int result = countVowelsInAllSubstrings("yadanar");
+//        int result = countVowelsInAllSubstrings("yadanar");
+        int result = sumOfDigitsInRange(10,12);
         System.out.println(result);
 
     }

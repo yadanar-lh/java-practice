@@ -32,4 +32,28 @@ public class NestedLoopExercises {
 
         return count;
     }
+
+    public static int sumOfDigitsInRange(int start, int end){
+        int result = 0;
+        int modulusNum = 0;
+        List<Integer> arr = new ArrayList<>();
+
+        for(int startNum = start; startNum <= end; startNum++){
+            arr.add(startNum);
+        }
+        System.out.println(arr);
+        for (int digits : arr){
+            while(digits > 0 ){
+                modulusNum += digits % 10;
+                digits /= 10;
+//                System.out.println("digits " +digits);
+//                System.out.println("mod " +modulusNum);
+            }
+            result += modulusNum;
+//            System.out.println("result " +result);
+            modulusNum = 0;
+        }
+
+        return result;
+    }
 }
