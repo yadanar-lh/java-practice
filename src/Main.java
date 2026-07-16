@@ -16,8 +16,9 @@ public class Main {
 //    int result = ReverseInteger(-897);
 //        int result = DigitFrequency("2223334566");
 //        int result = countVowelsInAllSubstrings("yadanar");
-        int result = sumOfDigitsInRange(10,12);
-        System.out.println(result);
+//        int result = sumOfDigitsInRange(10,12);
+        characterFrequencyMatrix("aba");
+//        System.out.println(result);
 
     }
 }

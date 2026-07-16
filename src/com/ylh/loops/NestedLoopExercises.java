@@ -8,6 +8,7 @@ Easy
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class NestedLoopExercises {
@@ -55,5 +56,20 @@ public class NestedLoopExercises {
         }
 
         return result;
+    }
+
+    public static void characterFrequencyMatrix(String input){
+        List<String> arr = new ArrayList<>();
+        int[] arrInt = new int[input.length()];
+        for(int i = 0; i < input.length(); i++){
+            for(int j = i + 1; j <= input.length(); j++){
+                arr.add(input.substring(i,j));
+                System.out.println(arr);
+                if(arr.get(j-1).contains(input.substring(i,j))){
+                    arrInt[i]++;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arrInt));
     }
 }
