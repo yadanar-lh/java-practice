@@ -72,4 +72,21 @@ public class NestedLoopExercises {
         }
         System.out.println(Arrays.toString(arrInt));
     }
+
+    /*
+    Medium
+    4. Check Pairs in String
+     */
+
+    public static int numOfPairsInString(String input){
+        int count = 0;
+        for(int i = 0; i < input.length() - 1; i++){
+            for(int j = i +1; j < input.length(); j++){
+                if(input.charAt(i) == input.charAt(j)){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
 }

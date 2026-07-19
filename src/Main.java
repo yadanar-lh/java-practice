@@ -17,8 +17,9 @@ public class Main {
 //        int result = DigitFrequency("2223334566");
 //        int result = countVowelsInAllSubstrings("yadanar");
 //        int result = sumOfDigitsInRange(10,12);
-        characterFrequencyMatrix("aba");
-//        System.out.println(result);
+//        characterFrequencyMatrix("aba");
+        int result = numOfPairsInString("cbaaba");
+        System.out.println(result);
 
     }
 }
