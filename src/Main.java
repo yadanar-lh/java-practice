@@ -18,7 +18,8 @@ public class Main {
 //        int result = countVowelsInAllSubstrings("yadanar");
 //        int result = sumOfDigitsInRange(10,12);
 //        characterFrequencyMatrix("aba");
-        int result = numOfPairsInString("cbaaba");
+//        int result = numOfPairsInString("cbaaba");
+        int result = countsOfPalindromesSubstring("aba");
         System.out.println(result);
 
     }

@@ -76,6 +76,7 @@ public class NestedLoopExercises {
     /*
     Medium
     4. Check Pairs in String
+    5. Check counts of palindromes substrings
      */
 
     public static int numOfPairsInString(String input){
@@ -87,6 +88,31 @@ public class NestedLoopExercises {
                 }
             }
         }
+        return count;
+    }
+
+    public static int countsOfPalindromesSubstring(String input){
+        List<String> arr = new ArrayList<>();
+        int count = 0;
+        for(int i = 0; i < input.length(); i++){
+            for (int j = i + 1; j <= input.length(); j++){
+                arr.add(input.substring(i,j));
+            }
+        }
+        System.out.println(arr);
+
+//       for(String substrings : arr){
+//           if(substrings.length() == 1){
+//               count++;
+//           } else if(substrings.length() > 1){
+//               String temp = "";
+//               while(substrings.length() < 0){
+//                   substrings = substrings.substring(0,substrings.length()-1);
+//                   temp = temp + substrings;
+//               }
+//           }
+//       }
+
         return count;
     }
 }
