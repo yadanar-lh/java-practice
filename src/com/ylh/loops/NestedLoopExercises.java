@@ -101,17 +101,22 @@ public class NestedLoopExercises {
         }
         System.out.println(arr);
 
-//       for(String substrings : arr){
-//           if(substrings.length() == 1){
-//               count++;
-//           } else if(substrings.length() > 1){
-//               String temp = "";
-//               while(substrings.length() < 0){
-//                   substrings = substrings.substring(0,substrings.length()-1);
-//                   temp = temp + substrings;
-//               }
-//           }
-//       }
+       for(String substrings : arr){
+           if(substrings.length() == 1){
+               count++;
+           }
+           if(substrings.length() > 1){
+               String temp = "";
+               String copySubstrings = substrings;
+               while(copySubstrings.length() > 0){
+                   temp += copySubstrings.substring((copySubstrings.length()-1));
+                   copySubstrings = copySubstrings.substring(0,copySubstrings.length()-1);
+               }
+               if(substrings.equals(temp)){
+                   count++;
+               }
+           }
+       }
 
         return count;
     }
