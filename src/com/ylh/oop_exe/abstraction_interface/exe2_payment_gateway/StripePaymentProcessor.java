@@ -1,4 +1,4 @@
-package com.ylh.oop_exe.abstraction_interface.exe2;
+package com.ylh.oop_exe.abstraction_interface.exe2_payment_gateway;
 
 public class StripePaymentProcessor extends AbstractPaymentProcessor implements Refundable{
     public StripePaymentProcessor(String merchantId, String apiKey) {

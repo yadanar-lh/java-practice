@@ -1,4 +1,4 @@
-package com.ylh.oop_exe.abstraction_interface.exe2;
+package com.ylh.oop_exe.abstraction_interface.exe2_payment_gateway;
 
 public interface Refundable {
 
