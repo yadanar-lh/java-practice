@@ -1,4 +1,4 @@
-package com.ylh.exception_handling.first_exe;
+package com.ylh.exception_handling.exe1;
 
 public class Main {
     static void main() {
