@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static void main() throws NullPointerException {
+    static void main() {
 
         String student = null;
 //        System.out.println(student.length());
@@ -15,8 +15,8 @@ public class Main {
         } catch (NullPointerException e ){
             System.out.println(e.getMessage());
         }
-        safeDivide();
 
+        safeDivide();
     }
 
     static Scanner scanner = new Scanner(System.in);
@@ -24,28 +24,42 @@ public class Main {
     public static void safeDivide(){
         int num1 = 0;
         int num2 = 0;
-        System.out.print("Enter first num ; ");
-        try{
-             num1 = scanner.nextInt();
-            scanner.nextLine();
-        } catch (InputMismatchException ime){
-            System.out.println(ime.getMessage());
+        boolean isValidInput = false;
+
+        while(!isValidInput){
+            System.out.print("Enter first num ; ");
+            try{
+                num1 = scanner.nextInt();
+                isValidInput = true;
+
+            } catch (InputMismatchException ime){
+                System.out.println("Pls enter the whole number.");
+                scanner.nextLine();
+            }
         }
 
-        System.out.print("Enter second num ; ");
-        try{
-             num2 = scanner.nextInt();
-            scanner.nextLine();
-        } catch (InputMismatchException ime){
-            System.out.println("Input MisMatch Exception Occurs");
+        isValidInput = false;
+        while(!isValidInput){
+            System.out.print("Enter second num ; ");
+            try{
+                num2 = scanner.nextInt();
+                isValidInput = true;
+
+            } catch (InputMismatchException ime){
+                System.out.println("Pls enter the whole number.");
+                scanner.nextLine();
+            }
         }
 
-        try{
-            int result = num1/num2;
-            System.out.println(result);
-        } catch (ArithmeticException ae){
-            System.out.println(ae.getMessage());
+        if(isValidInput){
+            try{
+                int result = num1/num2;
+                System.out.println(result);
+            } catch (ArithmeticException ae){
+                System.out.println("Cannot divided by zero.");
+            }
         }
+
 
 
     }
